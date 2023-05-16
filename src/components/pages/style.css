@@ -1,0 +1,301 @@
+:root {
+    --primary-color: #3763FF;
+    --primary-btn-color: var(--primary-color);
+    --primary-border-color: #8383ff;
+    --danger-color: #ff0000;
+    --edit-button-color: #1538ff;
+    --border-2px: 2px solid #cfcfcf;
+
+    --main-font-family: 'Poppins', sans-serif;
+}
+
+* {
+    font-family: var(--main-font-family);
+}
+.navigation {
+    font-family: var(--main-font-family);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.navigation a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 350ms;
+}
+
+.navigation a:hover{
+    background-color: rgb(103, 144, 255);
+}
+.content-section {
+    font-family: var(--main-font-family);
+    display: flex;
+}
+
+.side-panel {
+    height: 90vh;
+    flex-grow: 1;
+    background-color:var(--primary-color);
+    border-top: 2px solid white;
+}
+
+.side-panel-item {
+    display: block;
+    color: rgb(32, 32, 32);
+    background-color: #c7c7ff;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: 350ms;
+}
+
+.side-panel-item:hover {
+    color: white;
+    background-color: var(--edit-button-color);
+}
+
+.employee-section {
+    display: inline-block;
+    flex-grow: 3;
+    margin: 25px 10px 10px 10px;
+}
+
+.employee-heading {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+}
+
+.employee-heading .button-section{
+    opacity: 0;
+}
+
+.no-cursor {
+    cursor: initial !important;
+}
+.employee-data-box {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 350ms ease-in-out;
+}
+
+.employee-data-box:hover {
+    background-color: var(--primary-btn-color);
+    color: white;
+}
+
+.emp-number {
+    width: 1.5em;
+}
+
+.emp-name {
+    width: 10em;
+}
+
+.emp-age {
+    width: 3.5em;
+}
+
+.emp-country {
+    width: 8em;
+}
+
+.emp-position {
+    width: 10em;
+}
+
+.emp-wage {
+    width: 3.5em;
+}
+.button-section {
+    display: flex;
+}
+
+.edit-button, .delete-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    padding: 3px 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 350ms;
+}
+.employee-data-box:hover .edit-button {
+    background-color: #5c74ff;
+    border: 2px solid #a4a4ff;
+}
+
+.employee-data-box svg path {
+    transition: 350ms;
+}
+
+.employee-data-box .edit-button:hover {
+    background-color: #425eff;
+}
+
+.employee-data-box .delete-button:hover {
+    background-color: #6a80ff;
+}
+
+.employee-data-box:hover svg path {
+    fill: white;
+}
+
+.on-hover-show {
+    /* display: none; */
+    padding: 2px 0 0 5px;
+}
+
+.employee-data-box:hover .on-hover-show {
+    display: inline;
+}
+
+.employee-container {
+    border: var(--border-2px);
+    border-radius: 15px;
+}
+
+.employee-container h1 {
+    margin: 15px 0  0 30px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-body {
+    padding: 25px;
+}
+
+.search-section {
+    display: flex;
+}
+
+.search-bar {
+    padding: 8px 15px;
+    border: var(--border-2px);
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+}
+
+.search-bar::placeholder {
+color: rgb(206, 206, 206);
+}
+
+.search-button, .add-emp-btn {
+    background-color: var(--primary-btn-color);
+    padding: 9px 25px;
+    font-size: 16px;
+    font-family: var(--main-font-family);
+    font-weight: 500;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.add-emp-btn {
+    border-radius: 10px;
+}
+
+.search-button {
+    border-radius: 0 10px 10px 0;
+}
+
+.table-header {
+    padding: 25px;
+    border-bottom: var(--border-2px);
+}
+
+/*----------- Add new employee ------------ */
+
+.add-emp-section .employee-container {
+    display: inline-block;
+}
+
+.data-section {
+    padding: 20px;
+}
+
+.wage {
+    max-width: 95px;
+}
+
+.input-design {
+    border: 2px solid #e4e4e4;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.inline-flex-col {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.labels {
+    padding: 0 0 5px 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.padding-top {
+    padding-top: 10px;
+}
+
+.input-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 2px solid #e4e4e4;
+}
+
+.input-buttons button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: var(--main-font-family);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 350ms;
+}
+
+.cancel {
+    border: 2px solid#e4e4e4;
+}
+
+.cancel:hover {
+    background-color: #d4d4d4;
+}
+
+.save {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-border-color);
+}
+.save:hover {
+    background-color: #5c74ff;
+}
+
+.emp-button-section {
+    padding-top: 30px;
+}
